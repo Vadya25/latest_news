@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "tetelab_news",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

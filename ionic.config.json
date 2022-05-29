@@ -1,0 +1,7 @@
+{
+  "name": "tetelab_news",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

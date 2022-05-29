@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      The latest ukrainian news
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-searchbar mode="ios" (ionInput)="searchInput($event)" cancelButtonText="Custom Cancel"></ion-searchbar>
+
+  <ion-list>
+    <ion-card mode="ios" *ngFor="let news of newsList">
+
+      <img [src]="news.urlToImage" />
+      
+      <ion-card-header>
+        <ion-card-subtitle> {{ news.author }} </ion-card-subtitle>
+        <ion-card-title> {{ news.title }} </ion-card-title>
+      </ion-card-header>
+  
+      <ion-item (click)="openNews(news.url)" lines="none" mode="ios" detail="true">
+        <ion-note class="description"> {{ news.description }} </ion-note>
+        <ion-note size="small" slot="end"> {{ news.publishedAt | date: 'HH:mm' }} </ion-note>
+      </ion-item>
+  
+    </ion-card>
+  </ion-list>
+</ion-content>
